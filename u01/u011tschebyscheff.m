@@ -7,3 +7,4 @@ for i=3:9,
     tm(:, i) = 2*x.*tm(:, i-1) - tm(:, i-2);
 end
 plot(x, tm);
+title('Tschebyscheff Polynome');
