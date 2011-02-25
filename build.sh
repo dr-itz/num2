@@ -24,18 +24,12 @@ OUT=abgabe_$DIR.m
 
 echo "% $DIR" > $OUT
 cat header.txt >> $OUT
-for i in $DIR/*.m; do
+for i in $DIR/u*.m; do
 	echo "- processing $i"
-	f=`basename $i .m`
-	echo >> $OUT
-	echo "%--------------------------------------------------------------------------" >> $OUT
-	echo "% $i : auto-generated header" >> $OUT
-	echo "%" >> $OUT
-	echo "fprintf('$f. Press any key');" >> $OUT
-	echo "pause;" >> $OUT
-	echo "clear;clc;" >> $OUT
-	echo "%--------------------------------------------------------------------------" >> $OUT
-	echo "%" >> $OUT
+	f=`basename $i .m | sed 's/u\([0-9][0-9]*\).*/u\1/g'`
+	cat fileheader.txt | sed -e "s|@@filename@@|$i|g" -e "s|@@progname@@|$f|g" >> $OUT;
 	cat $i >> $OUT
+	echo >> $OUT
+	echo >> $OUT
 done
 echo "output written: $OUT"

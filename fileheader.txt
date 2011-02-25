@@ -1,0 +1,8 @@
+%--------------------------------------------------------------------------
+% @@filename@@ : auto-generated header
+%
+fprintf('Exercise @@progname@@. Press any key to start');
+pause;
+clear;clc;clf;close;
+%--------------------------------------------------------------------------
+%
