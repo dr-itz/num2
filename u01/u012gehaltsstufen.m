@@ -15,4 +15,12 @@ b=1000*[20 20 20 20 1000 ]'
 format bank
 fprintf('Gehaltsstufen');
 x = A\b
+
+s = zeros(5,2);
+s(2:5,1) = 1.2*x(1:4,:);
+s(:,2) = x;
+bar(s);
+title('Gehaltsstufen');
+legend('Vorgaenger + 20%', 'Gehaltstufe', 'Location', 'Northwest');
+
 format short
