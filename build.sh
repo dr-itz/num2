@@ -20,16 +20,14 @@ if [ ! -d $DIR ]; then
 	exit 1
 fi
 
-OUT=abgabe_$DIR.m
+mkdir -p abgabe/$DIR
 
-echo "% $DIR" > $OUT
-cat header.txt >> $OUT
-for i in $DIR/u*.m; do
+for i in $DIR/*.m; do
 	echo "- processing $i"
-	f=`basename $i .m | sed 's/u\([0-9][0-9]*\).*/u\1/g'`
-	cat fileheader.txt | sed -e "s|@@filename@@|$i|g" -e "s|@@progname@@|$f|g" >> $OUT;
+	OUT=abgabe/$i
+	echo "% $DIR" > $OUT
+	cat header.txt >> $OUT
 	cat $i >> $OUT
 	echo >> $OUT
-	echo >> $OUT
 done
-echo "output written: $OUT"
+echo "output written: abgabe/$DIR"
