@@ -18,11 +18,11 @@ hold on
 axis equal;
 
 % n-Eck
-w = 0:360/n:360;
+w = 0:a:360;
 x = cosd(w)*r;
 y = sind(w)*r;
 
-plot(x,y);
+plot(x,y,'r');
 figure(1);
 hold off;
 
