@@ -1,6 +1,6 @@
 function [ w ] = angofvec( u,v )
-%ANGOFVEC Summary of this function goes here
-%   Detailed explanation goes here
+%ANGOFVEC Winkel zwischen zwei Vekoren
+%   u, v: Vetkoren, gibt den Winkel in Grad zurueck
     % Seite 184
     cow=u'*v/(norm(u)*norm(v)); 
     w=acosd(cow);
