@@ -25,9 +25,9 @@ mkdir -p abgabe/$DIR
 for i in $DIR/*.m; do
 	echo "- processing $i"
 	OUT=abgabe/$i
-	echo "% $DIR" > $OUT
-	cat header.txt >> $OUT
-	cat $i >> $OUT
+	cat $i > $OUT
 	echo >> $OUT
+	echo "% $DIR" >> $OUT
+	cat footer.txt >> $OUT
 done
 echo "output written: abgabe/$DIR"
