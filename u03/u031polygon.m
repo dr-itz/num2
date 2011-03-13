@@ -1,21 +1,21 @@
-function [W] = poly2(n)
+function [W] = u031polygon(n)
 
 E1=[0 0]';
 b=[3 0]';
 alpha=(360/n);
 k=1;
 E2=E1+b;
-M=[E1 E2]
-alt=E2
+M=[E1 E2];
+alt=E2;
 for k =k:(n-2)
-    k*alpha
+    k*alpha;
     DW=[cosd((k)*alpha) -sind((k)*alpha); sind((k)*alpha) cosd((k)*alpha)];
-    v=DW*b
+    v=DW*b;
     neu=alt+v;
     M=[M neu];
-    alt=neu
+    alt=neu;
 end
-M=[M E1]                % Linie zurück zum Anfangspunkt, zum Zeichnen!
+M=[M E1] ;               % Linie zurück zum Anfangspunkt, zum Zeichnen!
 
 
 % nun die Winkel
