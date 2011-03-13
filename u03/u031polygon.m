@@ -1,5 +1,6 @@
 function [W] = u031polygon(n)
-
+% gibt einen Vektor mit n-2 Winkeln zurück
+% Winkel zwischen den n-2 Eckpunkten und der BasisSeite E1E2
 E1=[0 0]';
 b=[3 0]';
 alpha=(360/n);
