@@ -1,0 +1,31 @@
+Unter der Verwendung der Funktion aus Uebung u043:
+	function [v] = u043(z,n)
+		v=[];
+		alpha=atan2(imag(z),real(z));
+		for k=0:n-1
+			w=(alpha/n)+k*2*pi/n;
+			s=abs(z).^(1/n);
+			kart=s.*cos(w)+i*s.*sin(w);
+			res=[s w];
+			v=[v; kart];
+		end
+	end
+    
+
+
+>> v = u043(-1,5)
+v =
+	 0.8090 + 0.5878i
+	-0.3090 + 0.9511i
+	-1.0000 + 0.0000i
+	-0.3090 - 0.9511i
+	 0.8090 - 0.5878i
+
+Quadrate:
+>> v.^2
+ans =
+	 0.3090 + 0.9511i
+	-0.8090 - 0.5878i
+	 1.0000 - 0.0000i
+	-0.8090 + 0.5878i
+	 0.3090 - 0.9511i
