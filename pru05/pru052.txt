@@ -1,3 +1,6 @@
+pru052
+======
+
 Unter der Verwendung der Funktion aus Uebung u043:
 	function [v] = u043(z,n)
 		v=[];
