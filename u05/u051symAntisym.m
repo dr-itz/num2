@@ -1,5 +1,5 @@
 function [ S, A ] = u051symAntisym( M )
-%U051SYMMASYMM Matrix-Zerlegung in symmetrischen und antisymmetrischen Teil
+%u051symAntisym: Matrix-Zerlegung in symmetrischen und antisymmetrischen Teil
 
 n = size(M,1);
 if n ~= size(M,2),
