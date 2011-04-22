@@ -8,7 +8,7 @@ hold on;
 
 mult = z1.*z2;
 pvec = 0:0.01:1;
-ls = z1.*(z2.^pvec);
+ls = z1*(z2.^pvec);
 
 hold on;
 plot(z1, 'b*');
