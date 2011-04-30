@@ -18,8 +18,9 @@ plot(f, 'r-');
 hold on;
 f2 = zeros(1,T);
 for t = 1:T,
-    for k = 1:9,
-        f2(t) = f2(t) + a(k)*cos(k*t*2*pi/T);
+    f2(t) = a(1)/2;
+    for k = 1:8,
+        f2(t) = f2(t) + a(k+1)*cos(k*t*2*pi/T);
     end
 end
 plot(f2, 'g-');
