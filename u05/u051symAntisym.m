@@ -23,5 +23,6 @@ for ii = 1 : n,
         S(ij,ii) = a;
     end
 end
-
+A
+S
 end

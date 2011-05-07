@@ -6,13 +6,21 @@
 % alle in einer Ebene liegen. (am besten mit der Hesse'schen Normalform)
 % Eckpunkte des Würfels 
 A=[0 0 0]';
+text(0,0,0,'A');
 B=[1 0 0]';
+text(1,0,0,'B');
 C=[1 0 1]';
+text(1,0,1,'C');
 D=[0 0 1]';
+text(0,0,1,'D');
 E=[0 1 0]';
+text(0,1,0,'E');
 F=[1 1 0]';
+text(1,1,0,'F');
 G=[1 1 1]';
+text(1,1,1,'G');
 H=[0 1 1]';
+text(0,1,1,'H');
 
 W=[A B C D H G C G F B F E H E A D];
 
@@ -21,11 +29,17 @@ hold on
 
 disp('0-Vektoren der Eckpunkte des Hexagons:')
 oMBF=0.5*(B+F)
+text(oMBF(1),oMBF(2),oMBF(3),'MBF');
 oMEF=0.5*(E+F)
+text(oMEF(1),oMEF(2),oMEF(3),'MEF');
 oMEH=0.5*(E+H) 
+text(oMEH(1),oMEH(2),oMEH(3),'MEH');
 oMDH=0.5*(D+H) 
+text(oMDH(1),oMDH(2),oMDH(3),'MDH');
 oMCD=0.5*(C+D) 
+text(oMCD(1),oMCD(2),oMCD(3),'MCD');
 oMBC=0.5*(B+C)
+text(oMBC(1),oMBC(2),oMBC(3),'MBC');
 
 HEX=[ oMBF oMEF oMEH oMDH oMCD oMBC oMBF oMEF oMEH];
 plot3(HEX(1,:),HEX(2,:),HEX(3,:));
@@ -72,7 +86,6 @@ n=cross(v,w)
 
 % Ebenengleichung: n1*x + n2*y + n3*z +d =0
 % d bestimmen mit Hilfe oMEF
-
 d = -1*(n(1)*oMEF(1)+n(2)*oMEF(2)+n(3)*oMEF(3));
 
 % liegen die anderen Punkte in der selben Ebene, muss die Ebenengleichung
@@ -81,5 +94,11 @@ d = -1*(n(1)*oMEF(1)+n(2)*oMEF(2)+n(3)*oMEF(3));
 % alle Punkte auf einmal:
 disp('Abstand aller Punkte von der Ebene (= oMEF - oMBF - oMEH) muss 0 sein:')
 HEX(:,1:6)'*n+d
+
+disp('3. Variantem Beispiel gemäss Buch S191:')
+disp('Abstand von MCD zu Polygon')
+en = n/norm(n);
+disp('en(trans)*0P - en(trans)*0A = 0')
+en'*oMCD-en'*oMEF
 
 
