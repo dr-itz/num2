@@ -53,11 +53,15 @@ end
 wk
 g2=A\y
 
-
+% innere Funktion für Gerade
+% x = x-Position
+% g1 = Paramter der Geraden y = x*g(1) + g(2)
+gerade = @(x,g) x*g(1)+g(2);
 
 
 % Gerade Normalengleichung plotten
 X=[x(1)-1 x(length(x))+1];
+gerade([-3 3],[1.1;0.7])
 Y=[gerade(X(1),n1) gerade(X(2),n1)];
 plot(X,Y,'mo-')
 
@@ -73,10 +77,7 @@ plot(X,Y,'r')
 
 
 
-% innere Funktion für Gerade
-% x = x-Position
-% g1 = Paramter der Geraden y = x*g(1) + g(2)
-gerade = @(x,g) x*g(1)+g(2);
+
 
 
 
