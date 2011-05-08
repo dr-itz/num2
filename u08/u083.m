@@ -14,7 +14,7 @@ gcf
 plot(x,y,'ro');
 axis([x(1)-1 x(length(x))+1 -4 4]); hold on; grid on;
 title('u083 Fit mit Gewicht')
-text(0,-2.5,'blau = linear Fit; rot = lin. Fit mit Gewicht')
+text(-0.5,-2.5,'blau/magenta = linear Fit; rot = lin. Fit mit Gewicht')
 
   % Abweichungen = Linien bei xk, von yk-0.5(ws(k)) bis yk+0.5(ws(k))
   for k=1:size(x,2)
