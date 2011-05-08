@@ -8,11 +8,9 @@ disp('z^(5/3)=i')
 z=[];
 n=5;
 % Winkel von i^3
-w=atan(imag(i^3)/real(i^3))
+w=pi/2*3;
+
 disp('Winkel von i^3')
-if w<0
-    w=2*pi+w
-end
 
 % 5te Wurzel
 for k=0:(n-1)
