@@ -3,7 +3,7 @@
 % man, indem man S zuerst transponiert und dann alle Singulärwerte, welche 
 % nicht Null sind durch ihre Inversen Werte ersetzt. 
 
-clc; clear; 
+clc, clear, format short
 
 x1 = [-3:3]';
 
