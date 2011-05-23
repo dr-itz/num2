@@ -17,4 +17,6 @@
 %
 % dL/dl = y - 5/x^3                         = 0
 
-% => x = 1, y = 4, l = -4
+
+% Das nichtlineare Gleichungssystem koennte nun mit dem Newton-Verfahren
+% iterativ geloest werden. Ist hier aber nicht Teil der Aufgabenstellung.
