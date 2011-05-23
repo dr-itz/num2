@@ -1,11 +1,8 @@
 % Kugelkoordinaten, Buch S.295/60-32
-xstart = [5 0.5 0.3]';
-xaktuell = xstart
 
-for i = 1:8
-    ferr = kugfct(xaktuell)
-    delx = -kugjac(xaktuell) \ ferr
-    xaktuell = xaktuell + delx
-    pause
+% Vektor mit den Schaetz- bzw. Startwerten
+xvec = [4 0.4 0.6]';
+
+for i = 1:3
+    xvec = xvec - kugjac(xvec) \ kugfct(xvec)
 end
-

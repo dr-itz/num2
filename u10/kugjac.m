@@ -3,19 +3,15 @@ function Jkug = kugjac(xvec)
 %   Jacobi Matrix zu Kugelkoordinaten
 
 Jkug = zeros(3);
-rac = xvec(1);
-tac = xvec(2);
-wac = xvec(3);
 
-Jkug(1,1) = cos(tac) * cos(wac);
-Jkug(1,2) = -rac * sin(tac) * cos(wac);
-Jkug(1,3) = -rac * cos(tac) * sin(wac);
-Jkug(2,1) = cos(tac) * sin(wac);
-Jkug(2,2) = -rac * sin(tac) * sin(wac);
-Jkug(2,3) = rac * cos(tac) * cos(wac);
-Jkug(3,1) = sin(tac);
-Jkug(3,2) = rac * cos(tac);
-Jkug(3,3) = 0;
+Jkug(1,1) = cos(xvec(2)) * cos(xvec(3));
+Jkug(1,2) = -xvec(1) * sin(xvec(2)) * cos(xvec(3));
+Jkug(1,3) = -xvec(1) * cos(xvec(2)) * sin(xvec(3));
+Jkug(2,1) = sin(xvec(2)) * cos(xvec(3));
+Jkug(2,2) = xvec(1) * cos(xvec(2)) * cos(xvec(3));
+Jkug(2,3) = -xvec(1) * sin(xvec(2)) * sin(xvec(3));
+Jkug(3,1) = sin(xvec(3));
+Jkug(3,2) = 0;
+Jkug(3,3) = xvec(1) * cos(xvec(3));
 
 end
-
