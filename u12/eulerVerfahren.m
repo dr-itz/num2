@@ -11,6 +11,6 @@ for k = 1 : (20/h),
     y(k+1) = y(k) + h * -0.1 * y(k);
 end
 
-res = y(2:end);
+res = y;
 
 end

@@ -5,13 +5,13 @@ hold on
 
 % Erzeugen Richtungsfeld y'(t,y) = -0.1 * y
 %   Kopiertes Skript decayfield.m
-xlin = [0 25];
+xlin = [0 20];
 ylin = [ 0 0];
 plot(xlin,ylin)
-axis([0 25 0 16])
+axis([0 20 0 18])
 hold on
-for k=1:24
-  for l=1:15
+for k=1:20
+  for l=1:18
      xdir = [k-0.2 k+0.2];
      ydir = [l+l*0.02 l-l*0.02];
      plot(xdir,ydir)
@@ -40,13 +40,20 @@ h3 = 0.1;
 res3 = eulerVerfahren(start,h3)
 
 % Zeichnen der Funktion ins Richtungsfeld (h = 1)
-x=1:(20/h1);
-plot(x,res1,'r')
+x=0:h1:20;
+p1 = plot(x,res1,'r');
 
 % Zeichnen der Funktion ins Richtungsfeld (h = 0.5)
-x=1:(20/h2);
-plot(x,res2,'m')
+x=0:h2:20;
+p2 = plot(x,res2,'m');
 
 % Zeichnen der Funktion ins Richtungsfeld (h = 0.1)
-x=1:(20/h3);
-plot(x,res3,'g')
+x=0:h3:20;
+p3 = plot(x,res3,'g');
+
+% Zeichnen der analytischen Loesung
+x=0:0.1:20;
+y=18*exp(-0.1*x);
+p4 = plot(x,y,'k');
+
+legend([p1 p2 p3 p4],'h=1','h=0.5','h=0.1','y=18*exp(-0.1*x)')
