@@ -49,8 +49,8 @@ ydvec
 t=t+0.2; disp(['t = ',num2str(t), ' --------------------']);
 yvec(1)= yvec(1)+ h*yvec(2); % x(0+0.2) = yvec(1)+ h*xp
 yvec(3)= yvec(3)+ h*yvec(4); % y(0+0.2) = yvec(3) + h*yp
-yvec(2)= -0.1*yvec(3);  % xp(0.2) = -0.1*yp(0.2=
-yvec(4)= +0.1*yvec(1);   % yp(0.2) = 
+yvec(2)= -0.1*yvec(3);  % xp(0.2) 
+yvec(4)= +0.1*yvec(1);   % yp(0.2)  
 yvec
 
 ydvec(1)=yvec(2);
@@ -63,8 +63,8 @@ ydvec
 t=t+0.2; disp(['t = ',num2str(t), ' --------------------']);
 yvec(1)= yvec(1)+ h*yvec(2); % x(0+0.2) = yvec(1)+ h*xp
 yvec(3)= yvec(3)+ h*yvec(4); % y(0+0.2) = yvec(3) + h*yp
-yvec(2)= -0.1*yvec(3);  % xp(0.2) = -0.1*yp(0.2=
-yvec(4)= +0.1*yvec(1);   % yp(0.2) = 
+yvec(2)= -0.1*yvec(3);  % xp(0.4) 
+yvec(4)= +0.1*yvec(1);   % yp(0.4)  
 yvec
 
 ydvec(1)=yvec(2);
@@ -78,8 +78,8 @@ ydvec
 t=t+0.2; disp(['t = ',num2str(t), ' --------------------']);
 yvec(1)= yvec(1)+ h*yvec(2); % x(0+0.2) = yvec(1)+ h*xp
 yvec(3)= yvec(3)+ h*yvec(4); % y(0+0.2) = yvec(3) + h*yp
-yvec(2)= -0.1*yvec(3);  % xp(0.2) = -0.1*yp(0.2=
-yvec(4)= +0.1*yvec(1);   % yp(0.2) = 
+yvec(2)= -0.1*yvec(3);  % xp(0.6)  
+yvec(4)= +0.1*yvec(1);   % yp(0.6)  
 yvec
 
 ydvec(1)=yvec(2);
